@@ -1,0 +1,131 @@
+{% extends "base_template.html" %}
+
+{%block content%}
+<style>
+    td {
+        text-align:right;
+    }
+    p {
+        color: tomato;
+
+    }
+</style>
+<section class="vh-100" style="background-color: #808080;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 0.1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5">REGISTER</h3>
+            
+      <form method = "post" enctype = "multipart/form-data">
+                  {% csrf_token %}
+              <table align = "center">
+                  <tr>
+  
+                      <td>
+                          <label>First Name :</label>                     
+                      </td>
+                      <td>
+                          {{signup_form.fname}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label>Last Name :</label>
+                      </td>
+                      <td>
+                          {{signup_form.lname}}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label>Profile Picture :</label>
+                      </td>
+                      <td>
+
+                      </td>
+                    <tr>
+                        <td><pre>            </pre></td>
+                      <td>
+                       {{signup_form.profile_picture}}
+                      </td>
+
+                    </tr>
+                  </tr>
+                  <tr>
+                      <tr>
+                          <td>
+                              <label>Role</label>
+                          </td>
+                          <td>
+                              {{signup_form.role}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <label>Username :</label>
+                          </td>
+                          <td>
+                              {{signup_form.username}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <label>Email :</label>
+                          </td>
+                          <td>
+                              {{signup_form.email}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <label>Password :</label>
+                          </td>
+                          <td>
+                              {{signup_form.password}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td align = "left">
+                              <label align = "left">Confirm Password </label>
+                          </td>
+                          <td>
+                              {{signup_form.confirm_password}}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <label>Address :</label>
+                          </td>
+                          <td>
+                              {{signup_form.address}}
+                          </td>
+                      </tr>
+                  <tr>              
+                      <td>
+                       
+                      </td>
+                      <td align = "right">
+                          <input type = "submit">
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><p>*{{ message }}</p></td>
+                      <td align = "right"><a href = "login">Sign in</a></td>
+                  </tr>
+                  
+   
+              </table>
+          </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  
+
+      {%endblock%}

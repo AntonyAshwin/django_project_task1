@@ -1,0 +1,45 @@
+{% extends "base_template.html" %}
+
+{%block content%}
+<section class="vh-100" style="background-color: #808080;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-md-9 col-lg-17 col-xl-21">
+          <div class="card" style="border-radius: 1px;">
+            <div class="card-body p-4">
+              <div class="d-flex text-black">
+                <div class="flex-shrink-0">
+                  <img src="https://icon-library.com/images/generic-user-icon/generic-user-icon-19.jpg"
+                    alt="Generic placeholder image" class="img-fluid"
+                    style="width: 180px; border-radius: 10px;">
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-1">NAME : {{fname}} {{lname}}</h5>
+                  <p class="mb-2 pb-1" style="color: #2b2a2a;">ROLE : {{role}}</p>
+                  <div class="d-flex justify-content-start rounded-3 p-2 mb-2"
+                    style="background-color: #efefef;">
+                    <div>
+                      <p class="small text-muted mb-1">EMAIL : {{email}}</p>
+        
+                    </div>
+                  </br>
+                    <div class="px-3">
+                      <p class="small text-muted mb-1">ADDRESS : {{address}}</p>
+                 
+                    </div>
+                    <div>
+                      <p class="small text-muted mb-1">USERNAME : {{username}}</p>
+                     
+                    </div>
+                  </div>
+                  <div class="d-flex pt-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    {%endblock%}
